@@ -1,5 +1,6 @@
 export class Movie {
-    constructor(title, watched){
+    constructor(id, title, watched){
+        this.id = id;
         this.title = title; 
         this.watched = watched;
     }
@@ -10,6 +11,14 @@ export class Movie {
 
     set title(value){
         this._title = value.trim();
+    }
+
+    get id(){
+        return this._id;
+    }
+
+    set id(value){
+        this._id = value;
     }
 
     get watched(){
