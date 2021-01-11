@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>MovieDecider</h1>
+        <h3>Created by Richard Nava</h3>
+        <div id="form-movies">
+           <label for="add-movie-form"> <h3 style="padding-top: 5px;margin-bottom: 0px;">Add a Movie</h3>
+                <form id="add-movie-form">
+                    <label>
+                        <input name="addMovie" id="add-movie" type="text" placeholder="Ex. The Matrix">
+                    </label>
+                    <br>Watched?
+                    <label for="true1">Yep!
+                        <input type="radio" id="true1" name="watchedcheck" value="true">
+                    </label>
+                    
+                    <label for="false1">Not yet</label>
+                    <input type="radio" id="false1" name="watchedcheck" value="false">
+                    </label>
+                    <br>
+                    <button>Submit</button>
+                </form>
+            </label>
+        </div>
+        <br>
+        <label for="search"><h3 style="padding-top: 5px;margin-bottom: 0px;">Search Movies</h3>
+            <input type="text" placeholder="Search movies..." id="search">
+        </label>
+        <div id="movie-list">
+
+        </div>
+        
+
+
+    </body>
+    <script src="./js/app.js" type="module"></script>
+</html> 
