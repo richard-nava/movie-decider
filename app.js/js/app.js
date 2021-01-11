@@ -11,8 +11,6 @@ const filters = {
     searchText: ''
 }
 
-
-
 // render list of movies to screen
 Utils.renderMovies(movies,filters)
 
@@ -72,4 +70,22 @@ document.querySelector('#search').addEventListener('input', function(e){
     Utils.renderMovies(movies,filters)
 })
 
+document.querySelector("[name='spin']").addEventListener('click', function(e){
+    movieChooser(movies)
+})
 
+// *********************************************
+// ************** movie chooser ****************
+// *********************************************
+
+// on click, choose a random movie from a list of unwatched movies
+// display that chosen movie to the screen
+// if confirm button is clicked, change watched status to watched and have an alert pop up confirming selection
+
+export const movieChooser = function(movies){
+    let unwatched = movies.filter(function (movie){
+        return movie.watched === false
+    })
+    console.log(unwatched)
+    
+}

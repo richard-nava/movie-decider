@@ -76,3 +76,13 @@ export const saveMovies = function (movies) {
 }
 
 
+// remove movie
+export const deleteMovie = function(id){
+    const movieIndex = movies.findIndex(function(movie){
+        return movie.id === id;
+    })
+    if(movieIndex > -1){
+        movies.splice(movieIndex, 1)
+    }
+}
+
