@@ -28,7 +28,7 @@ document.querySelector('#add-movie-form').addEventListener('submit', function(e)
     var val
 
     for (const radio of radios){
-        console.log(radios.value)
+        //console.log(radios.value)
         if(radio.checked && radio.value == "true"){
             val = true
 
@@ -83,9 +83,58 @@ document.querySelector("[name='spin']").addEventListener('click', function(e){
 // if confirm button is clicked, change watched status to watched and have an alert pop up confirming selection
 
 export const movieChooser = function(movies){
+    
+    // get all unwatched movies
     let unwatched = movies.filter(function (movie){
         return movie.watched === false
     })
-    console.log(unwatched)
+    
+
+    
+
+    // TEST CODE
+    //const textEl = document.createElement('h2')
+    //textEl.textContent = 'Hello'
+
+    let rotation = setInterval(() => {chooser(unwatched)}, 100);
+
+    // calls the clear function for the CHOOSER function
+    setTimeout(function(){clearInterval(rotation)},3000)
     
 }
+
+// Chooser > gets a random movie, generates dom, displays dom, clears div
+export const chooser = function(movies){
+    document.querySelector('#random-titles').innerHTML = ''
+    let movie = movies[Math.floor(Math.random() * movies.length)]
+    let movieEl = titleDom(movie)
+    titleDisp(movieEl)
+}
+
+
+// create DOM for movie chooser
+export const titleDom = function(movie){
+    const textEl = document.createElement('h2')
+    textEl.textContent = movie.title
+    return textEl
+}
+
+// appends the Title to the index
+export const titleDisp = function(titleEl){
+    document.querySelector('#random-titles').appendChild(titleEl)
+}
+
+// stops the chooser
+export const stopChooser = function(){
+    clearInterval(chooser)
+}
+
+
+//displays each unwatched title dom for half sec
+export const showTitles = function(movies){
+    movies.forEach(function (movie){
+        let titleEl = titleDom(movie)
+        setInterval(function(){titleDisp(titleEl)},400)
+    })
+}
+
