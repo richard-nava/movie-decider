@@ -1,7 +1,7 @@
 # NOTES
 
-## Features
-
+## Features (TODO)
+- Make movie edit page not ugly
 - Have movies rendered in an easily readable format (maybe rows)
 - Deploy site to online server
 
