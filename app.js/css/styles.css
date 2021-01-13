@@ -1,0 +1,16 @@
+h1 {
+    color:blueviolet
+}
+
+#app-title{
+    margin-top: 15px;
+
+}
+
+.movieList{
+    margin-top: 15px;
+}
+
+#search-bar{
+    align-self: center;
+}

@@ -90,12 +90,11 @@ export const movieChooser = function(movies){
     let unwatched = movies.filter(function (movie){
         return movie.watched === false
     })
-    
 
-
+    // Starts the chooser
     let rotation = setInterval(() => {chooser(unwatched)}, 100);
 
-    // calls the clear function for the CHOOSER function
+    // ends the chooser after 3 secs 
     setTimeout(function(){clearInterval(rotation)},3000)
     
 }
