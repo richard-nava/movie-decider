@@ -10,11 +10,20 @@ export const getSavedMovies = function (){
 
 export const renderMovies = function(movies,filters){
     let filteredMovies = []
-    filteredMovies = movies.filter(function(mov){
-        return mov.title.toLowerCase().includes(filters.searchText.toLowerCase())
-    })
+    
+    if(filters.hideWatched == false){
+        filteredMovies = movies.filter(function(mov){
+            return mov.title.toLowerCase().includes(filters.searchText.toLowerCase())
+        })
+    } else {
+        filteredMovies = movies.filter(function(mov){
+            return mov.title.toLowerCase().includes(filters.searchText.toLowerCase()) && mov.watched == false
+        })
+        
+    }
 
     document.querySelector('#movie-list').innerHTML = ''
+    
 
     filteredMovies.forEach(function (movie){
 

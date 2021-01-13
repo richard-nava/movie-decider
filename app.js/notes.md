@@ -1,9 +1,16 @@
-#NOTES
+# NOTES
 
-Features
-- Filter watched/unwatched
+## Features
+
 - Have movies rendered in an easily readable format (maybe rows)
-- ~~Randomize feature~~
+- Deploy site to online server
+
+### Dream Big Features
+- Add a login feature
 - Aggregate movies from IMDB
-- Edit movie after creation
-- Delete movie from watchlist
+
+## Dunzo List
+- ~~Filter watched/unwatched~~
+- ~~Randomize Movie feature~~
+- ~~Delete movie from watchlist~~
+- ~~Edit movie after creation~~

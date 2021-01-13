@@ -6,28 +6,28 @@ export class Movie {
     }
 
     get title(){
-        return this._title
+        return this.title
     }
 
     set title(value){
-        this._title = value.trim();
+        this.title = value.trim();
     }
 
     get id(){
-        return this._id;
+        return this.id;
     }
 
     set id(value){
-        this._id = value;
+        this.id = value;
     }
 
     get watched(){
-        return this._watched;
+        return this.watched;
     }
 
     set watched(value){
         if(true || false){
-            this._watched = value;
+            this.watched = value;
         } else {
             return 'Error! Not a valid entry.'
         }

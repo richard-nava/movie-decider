@@ -8,7 +8,8 @@ let movies = Utils.getSavedMovies()
 // *****************************************
 
 const filters = {
-    searchText: ''
+    searchText: '',
+    hideWatched : false
 }
 
 // render list of movies to screen
@@ -62,11 +63,15 @@ document.querySelector('#add-movie-form').addEventListener('submit', function(e)
     Utils.renderMovies(movies,filters);
 })
 
-
+document.querySelector('#hide-watched').addEventListener('change', function(e){
+    filters.hideWatched = e.target.checked
+    Utils.renderMovies(movies,filters)
+})
 
 // Search query listener 
 document.querySelector('#search').addEventListener('input', function(e){
     filters.searchText = e.target.value
+
     Utils.renderMovies(movies,filters)
 })
 
@@ -74,14 +79,11 @@ document.querySelector("[name='spin']").addEventListener('click', function(e){
     movieChooser(movies)
 })
 
-// *********************************************
-// ************** movie chooser ****************
-// *********************************************
 
-// on click, choose a random movie from a list of unwatched movies
-// display that chosen movie to the screen
-// if confirm button is clicked, change watched status to watched and have an alert pop up confirming selection
 
+// ***************************************************************
+// *********************** movie chooser *************************
+// ***************************************************************
 export const movieChooser = function(movies){
     
     // get all unwatched movies
@@ -90,11 +92,6 @@ export const movieChooser = function(movies){
     })
     
 
-    
-
-    // TEST CODE
-    //const textEl = document.createElement('h2')
-    //textEl.textContent = 'Hello'
 
     let rotation = setInterval(() => {chooser(unwatched)}, 100);
 

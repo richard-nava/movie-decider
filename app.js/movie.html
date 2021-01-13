@@ -2,15 +2,36 @@
 <html>
     <head></head>
     <body>
-        <div>
-            <label for="movie-title-set">Title</label>
-            <input id="movie-title-set">
+        <div id="notification-area">
+
         </div>
         <div>
-            <label for="is-watched">Watched Status</label>
-            <radio
+            <form id="edit-movie">
+                <div>
+                    <label for="movie-title-set">Title
+                        <input name="updatedTitle" id="movie-title-set">
+                    </label>
+                </div>
+                <div>
+                    <label for="is-watched">Watched Status</label>
+                    <label for="true1">Yep!
+                        <input type="radio" id="true1" name="watchedcheck" value="true">
+                    </label>
+                    
+                    <label for="false1">Not yet</label>
+                    <input type="radio" id="false1" name="watchedcheck" value="false">
+                    </label>
+                </div>
+                <button>Update</button>
+            </form>
         </div>
-        <button id="remove-movie">Delete Movie</button>
+        <br>
+        <div>
+            <button id="remove-movie">Delete Movie</button>
+        </div>
+        <div>
+            <button id="go-home">Home</button>
+        </div>
     </body>
     <script src="./js/uudi.js"></script>
     
