@@ -2,6 +2,7 @@
 
 ## Features (TODO)
 - Make movie edit page not ugly
+- Make the Let's Watch It button functiona
 - Have movies rendered in an easily readable format (maybe rows)
 - Deploy site to online server
 
