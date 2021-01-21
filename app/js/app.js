@@ -18,6 +18,7 @@ Utils.renderMovies(movies,filters)
 
 // ******************************************
 
+
 // Add movie form
 document.querySelector('#add-movie-form').addEventListener('submit', function(e){
     e.preventDefault()
