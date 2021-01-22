@@ -7,18 +7,73 @@ h1 {
 
 }
 
+.movie-things{
+    margin-top: 15px;
+}
+
+.searchbar{
+    width: 20rem;
+    margin-left: 5px;
+}
+
 .movieList{
     margin-top: 15px;
 }
 
 #search-bar{
-    align-self: center;
+    /* align-self: center; */
+}
+
+#search{
+    margin-top: 15px;
 }
 
 body {
     background-color:white;
+    min-height: 400px;
+   margin-bottom: 100px;
+   clear: both;
 }
 
 #movie-card{
     align-self: center;
 }
+
+#add-movie-form{
+    margin-top: 15px;
+}
+
+/* Add a black background color to the top navigation */
+.botnav {
+    background-color: #2DD2B2;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+/* Style the links inside the navigation bar */
+.botnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 6px 12px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.botnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.botnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Right-aligned section inside the top navigation */
+.botnav-right {
+  float: right;
+}
+

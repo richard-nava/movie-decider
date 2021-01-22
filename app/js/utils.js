@@ -48,9 +48,10 @@ export const renderMovies = function(movies,filters){
 
  // generate the DOM structure for a movie
  export const generateMovieDom = function(movie){
-    const movieEl = document.createElement('div')
-    const textEl = document.createElement('p')
+    //const movieEl = document.createElement('div')
+    const textEl = document.createElement('a')
     textEl.setAttribute('href', `./movie.html#${movie.id}`)
+    textEl.setAttribute('class', 'list-group-item list-group-item-action')
     
 
 
@@ -72,10 +73,10 @@ export const renderMovies = function(movies,filters){
     })
 
     // attach structures to page
-    textEl.appendChild(button)
-    movieEl.appendChild(textEl)
+    //textEl.appendChild(button)
+    //.appendChild(textEl)
 
-    return movieEl
+    return textEl
 
 }
 

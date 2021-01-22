@@ -81,13 +81,29 @@ document.querySelector("[name='spin']").addEventListener('click', function(e){
     movieChooser(movies)
 })
 
+// confirm watched movie 
 document.querySelector("[name='confirm']").addEventListener('click', function(e){
     let area = document.querySelector("#random-titles")
     let movieID = area.getElementsByClassName("chosenMovie")[0].id
     let mov = movies.find(movie => movie.id===movieID)
     mov.watched = true
     Utils.saveMovies(movies)
+
+    let notifArea = document.querySelector('#notification-area');
+    document.querySelector('#notification-area').appendChild(watchNotification(mov))
+    setTimeout(function(){
+        notifArea.innerHTML = ''
+    }, 5000)
+
 })
+
+const watchNotification = function(movie){
+    let notif = document.createElement('h5')
+    notif.style.color = "green";
+    notif.textContent = `Watched status ${movie.title} were updated. Enjoy your movie!`
+    
+    return notif;
+}
 
 
 

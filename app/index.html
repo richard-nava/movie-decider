@@ -10,78 +10,95 @@
         <nav class="navbar navbar-dark bg-primary">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">MovieDecider</a>
+            
             </div>
-          </nav>
+        </nav>
         
         
-
         <!----------- CHOOSE A RANDOM MOVIE ----------->
-        <div class="container" id="app-title">
-            <div class="card border border-3" id="movie-chooser">
-                <div class="card-body text-center">
-                    <div class="container" id="random-titles">
-                        <h1>Welcome to MovieDecider</h1>
-                        
-                        <p>Spin the wheel to choose a random movie from your
-                            watchlist!<br> Add a movie to your watchlist by entering its info below.
-                        </p>
+            <div class="container col-lg" id="app-title">
+                <div class="card border border-3" id="movie-chooser">
+                    <div class="card-body text-center">
+                        <div id="notification-area">
+                            </div>
+                        <div class="container" id="random-titles">
+                            
+                            <h1>Welcome to MovieDecider</h1>
+                            
+                            <p>Spin the wheel to choose a random movie from your
+                                watchlist!<br> Add a movie to your watchlist by entering its info below.
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-primary" name="spin">Spin the Wheel</button>
+                        <button type="button" class="btn btn-success" name="confirm">Let's Watch It!</button>
                     </div>
-                    <button name="spin">Spin the Wheel</button>
-                    <button name="confirm">Let's Watch It!</button>
                 </div>
             </div>
-        </div>
         <!-- <div class="container"id="like_button_container">
 
         </div> -->
 
-        <div class="container">
-            
-
-        <div class="row">   
-            <!----------- ADD MOVIE ----------->
-            <div class="col d-flex justify-content-center" id="form-movies">
-            <label for="add-movie-form"> <h3 style="padding-top: 5px;margin-bottom: 0px;">Add a Movie</h3>
-                    <form id="add-movie-form">
-                        <label>
-                            <input name="addMovie" id="add-movie" type="text" placeholder="Ex. The Matrix">
-                        </label>
-                        <br>Watched?
-                        <label for="true1">Yep!
-                            <input type="radio" id="true1" name="watchedcheck" value="true">
-                        </label>
-                        
-                        <label for="false1">Not yet</label>
-                        <input type="radio" id="false1" name="watchedcheck" value="false">
-                        </label>
-                        <br>
-                        <button>Submit</button>
-                    </form>
-                </label>
-            </div>
-            <br>
-
-            <!----------- SEARCH MOVIE ----------->
-            <div class="col" id="search-bar">
-                <label for="search"><h3 style="padding-top: 5px;margin-bottom: 0px;">Search Movies</h3>
-                    <input type="text" placeholder="Search movies..." id="search">
-                </label>
-                <br>
-                <label for="hide-watched">
-                <input type="checkbox" name="hideWatched" id="hide-watched">
-                </label> Hide Watched Movies
-                <!----------- LIST OF MOVIES ----------->
-                <div class="movieList " id="movie-list">
-
+        <div class="container movie-things">
+            <div class="row">   
+                <!----------- ADD MOVIE ----------->
+                <div class="col card">
+                    <div class="card-body">    
+                        <div id="form-movies">
+                            <h3 class="card-title" style="padding-top: 5px;margin-bottom: 0px;">Add a Movie</h3>
+                                    <form id="add-movie-form">
+                                        <div class="mb-2">
+                                            <input name="addMovie" class="form-control" id="add-movie" type="text" placeholder="Ex. The Matrix">
+                                        </div>
+                                        <div class="mb-2">
+                                        Watched?
+                                        <label for="true1">Yep!
+                                            <input type="radio" id="true1" class="form-control-check" name="watchedcheck" value="true">
+                                        </label>
+                                        
+                                        <label for="false1">Not yet</label>
+                                        <input type="radio" id="false1" class="form-control-check" name="watchedcheck" value="false">
+                                        </label>
+                                        </div>
+                                        
+                                        <button type="button" class="btn btn-primary d-flex justify-content-center">Submit</button>
+                                    </form>
+                                
+                        </div>
+                    </div>
                 </div>
-            
-            </div>
+                <br>
 
-            
-           
-        </div>     
+                <!----------- SEARCH MOVIE ----------->
+                <div class="card col-8 col-md-offset-2"">
+                <div class="card-body" id="search-bar">
+                                        <h3 class="card-title" style="padding-top: 5px;margin-bottom: 0px;">Search Movies</h3>
+
+                    <div class="form-inline">
+                    <input class="form-control col-auto searchbar" type="text" placeholder="Search movies..." id="search">
+                    <input type="checkbox" name="hideWatched" id="hide-watched">
+                    <label for="hide-watched">Hide Watched Movies</label> 
+                    </div>   
+                    
+                    
+                    <br>
+                    
+                    <!----------- LIST OF MOVIES ----------->
+                    <div class="movieList list-group overflow-auto" id="movie-list">
+
+                    </div>
+                
+                </div>
+
+            </div>     
         </div>
-
+        <div class="botnav fixed-bottom">
+            
+            <div class="botnav-right">
+                <a href="#">Created by Richard Nava</a>
+                
+            </div>
+        </div>
+        </div>
         
         <script src="./js/uudi.js"></script>
         <script src="./js/app.js" type="module"></script>
@@ -98,6 +115,7 @@
 
         <!-- Load our React component. -->
         <script src="./js/like_button.js"></script>
+        
 
     </body>
     
