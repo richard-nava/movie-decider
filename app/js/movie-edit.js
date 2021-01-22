@@ -76,7 +76,7 @@ const changeNotification = function(movie){
     return notif;
 }
 
-
 const stopNotif = function(){
     clearInterval(changeNotification)
 }
+

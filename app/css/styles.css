@@ -14,3 +14,11 @@ h1 {
 #search-bar{
     align-self: center;
 }
+
+body {
+    background-color:white;
+}
+
+#movie-card{
+    align-self: center;
+}

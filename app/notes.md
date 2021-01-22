@@ -2,12 +2,13 @@
 
 ## Features (TODO)
 - Make movie edit page not ugly
-- Make the Let's Watch It button functional
+- Add a movie rating section to the edit page
 - Have movies rendered in an easily readable format (maybe rows)
 - Deploy site to online server
 
 ### Dream Big Features
 - Add a login feature
+    - Save movie list to each user
 - Aggregate movies from IMDB
 
 ## Dunzo List
@@ -15,3 +16,5 @@
 - ~~Randomize Movie feature~~
 - ~~Delete movie from watchlist~~
 - ~~Edit movie after creation~~
+- ~~Make the Let's Watch It button functional~~
+

@@ -76,8 +76,17 @@ document.querySelector('#search').addEventListener('input', function(e){
     Utils.renderMovies(movies,filters)
 })
 
+// spin button
 document.querySelector("[name='spin']").addEventListener('click', function(e){
     movieChooser(movies)
+})
+
+document.querySelector("[name='confirm']").addEventListener('click', function(e){
+    let area = document.querySelector("#random-titles")
+    let movieID = area.getElementsByClassName("chosenMovie")[0].id
+    let mov = movies.find(movie => movie.id===movieID)
+    mov.watched = true
+    Utils.saveMovies(movies)
 })
 
 
@@ -113,6 +122,8 @@ export const chooser = function(movies){
 export const titleDom = function(movie){
     const textEl = document.createElement('h2')
     textEl.textContent = movie.title
+    textEl.setAttribute("id", movie.id)
+    textEl.setAttribute("class", "chosenMovie")
     return textEl
 }
 
@@ -135,3 +146,5 @@ export const showTitles = function(movies){
     })
 }
 
+
+// Watch button changes status of movie
