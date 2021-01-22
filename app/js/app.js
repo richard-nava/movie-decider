@@ -100,7 +100,7 @@ document.querySelector("[name='confirm']").addEventListener('click', function(e)
 const watchNotification = function(movie){
     let notif = document.createElement('h5')
     notif.style.color = "green";
-    notif.textContent = `Watched status ${movie.title} were updated. Enjoy your movie!`
+    notif.textContent = `Watched status for ${movie.title} updated. Enjoy your movie!`
     
     return notif;
 }
